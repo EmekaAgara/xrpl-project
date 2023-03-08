@@ -37,10 +37,19 @@
       <input type="radio" id="dn" name="server"
         value="wss://s.devnet.rippletest.net:51233">
       <label for="devnet">Devnet</label>
-      <br/><br/>
-      <button type="button" onClick="getAccountsFromSeeds()">Get Accounts From Seeds</button>
-      <br/>
+  
+      <p>
+        <textarea id="standbyResultField"  cols="55" rows="5" placeholder="standby account Results" ></textarea>
+      </p>
+
+      <p>
+        <textarea id="operationalResultField" cols="55" rows="5" placeholder="operational account Results" ></textarea>
+      </p>
+
+
       <textarea id="seeds" cols="40" rows= "2"></textarea>
+      <br/>
+      <button type="button" onClick="getAccountsFromSeeds()">Get Accounts From Seeds</button>
       <br/><br/>
       <table style="display: inline-block;">
         <tr valign="top">
