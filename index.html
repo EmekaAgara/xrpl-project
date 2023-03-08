@@ -55,201 +55,94 @@
       <button type="button" class="secbutton" onClick="getAccount('standby')">Get New Standby Account</button>
 
 
-      <table style="display: inline-block;">
-        <tr valign="top">
+      <table class="table">
+        <tr>
           <td>
             <table>
-              <tr valign="top">
+              <tr>
                 <td>
                 <td>
-                  
                   <div class="container">
                   <table class="table1">
                     <tr valign="top">
                       <td align="right">
-                        Standby Account
+                        
                       </td>
                       <td>
-                        <input type="text" id="standbyAccountField" size="40"></input>
+                        <p class="input_header">Standby Account </p>
+                        <input type="text" class="n_input" id="standbyAccountField" size="40"></input>
                         <br>
                       </td>
                     </tr>
                     <tr>
                       <td align="right">
-                        Public Key
+                        
                       </td>
                       <td>
-                        <input type="text" id="standbyPubKeyField" size="40"></input>
+                        <p class="input_header">Public Key</p>
+                        <input type="text" class="n_input" id="standbyPubKeyField" size="40"></input>
                         <br>
                       </td>
                     </tr>
                     <tr>
                       <td align="right">
-                        Private Key
+                        
                       </td>
                       <td>
-                        <input type="text" id="standbyPrivKeyField" size="40"></input>
+                        <p class="input_header">Private Key</p>
+                        <input type="text" class="n_input" id="standbyPrivKeyField" size="40"></input>
                         <br>
                       </td>
                     </tr>
                     <tr>
                       <td align="right">
-                        Seed
+                        
                       </td>
                       <td>
-                        <input type="text" id="standbySeedField" size="40"></input>
+                        <p class="input_header">Seed </p>
+                        <input type="text" class="n_input" id="standbySeedField" size="40"></input>
                         <br>
                       </td>
                     </tr>
                     <tr>
                       <td align="right">
-                        XRP Balance
+                        
                       </td>
                       <td>
-                        <input type="text" id="standbyBalanceField" size="40"></input>
+                        <p class="input_header">XRP Balance </p>
+                        <input type="text" class="n_input" id="standbyBalanceField" size="40"></input>
                         <br>
                       </td>
                     </tr>
                     <tr>
                       <td align="right">
-                        Amount
+                        
                       </td>
                       <td>
-                        <input type="text" id="standbyAmountField" size="40"></input>
+                        <p class="input_header">Amount </p>
+                        <input type="text" class="n_input" id="standbyAmountField" size="40"></input>
                         <br>
                       </td>
                     </tr>
                    <tr>
                       <td align="right">
-                        Destination
+                        
                       </td>
                       <td>
-                        <input type="text" id="standbyDestinationField" size="40"></input>
-                        <br>
+                        <p class="input_header">Destination Address </p>
+                        <input type="text" class="n_input" id="standbyDestinationField" size="40"></input>
+                        <br><br>
+                        <button type="button" class="button" onClick="sendXRP()">Send XRP&#62;</button>
                       </td>
                     </tr>
                     
                   </table>
-
-
-                  <p align="right">
-                    <textarea id="standbyResultField" cols="80" rows="20" ></textarea>
-                  </p>
                 </td>
-                </td>
-                <td>
-                  <table>
-                    <tr valign="top">
-                      <td align="center" valign="top">
-                        <button type="button" onClick="sendXRP()">Send XRP&#62;</button>
-                      </td>
-                    </tr>
-                    </td>
-                    </tr>
-                  </table>
-                </td>
-              </tr>
-            </table>
-          </td>
-          <td>
-            <table>
-              <tr>
-                <td>
-                  <table>
-                    <tr>
-                      <td align="center" valign="top">
-                        <button type="button" onClick="oPsendXRP()">&#60;Send KXRP</button>
-                        </td>
-
-                        <td align="right">
-                          <button type="button" onClick="getAccount('operational')">Get New Operational Account</button>
-                        
-                        
-                        
-                          <table class="table2">
-                          <tr valign="top">
-                            <td align="right">
-                              Operational Account
-                            </td>
-                            <td>
-                              <input type="text" id="operationalAccountField" size="40"></input>
-                              <br>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td align="right">
-                              Public Key
-                            </td>
-                            <td>
-                              <input type="text" id="operationalPubKeyField" size="40"></input>
-                              <br>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td align="right">
-                              Private Key
-                            </td>
-                            <td>
-                              <input type="text" id="operationalPrivKeyField" size="40"></input>
-                              <br>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td align="right">
-                              Seed
-                            </td>
-                            <td>
-                              <input type="text" id="operationalSeedField" size="40"></input>
-                              <br>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td align="right">
-                              XRP Balance
-                            </td>
-                            <td>
-                              <input type="text" id="operationalBalanceField" size="40"></input>
-                              <br>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td align="right">
-                              Amount
-                            </td>
-                            <td>
-                              <input type="text" id="operationalAmountField" size="40"></input>
-                              <br>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td align="right">
-                              Destination
-                            </td>
-                            <td>
-                              <input type="text" id="operationalDestinationField" size="40"></input>
-                              <br>
-                            </td>
-                          </tr>
-                        </table>
-
-
-
-                        <p align="right">
-                          <textarea id="operationalResultField" cols="80" rows="20" ></textarea>
-                        </p>
-                      </td>
-                      </td>
-                    </tr>
-                    </td>
-                    </tr>
-                  </table>
                 </td>
               </tr>
             </table>
           </td>
         </tr>
       </table>
-    </div>
-      </form>
   </body>
 </html>
