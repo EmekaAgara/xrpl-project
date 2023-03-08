@@ -1,3 +1,21 @@
 .pagetitle{
-    
+    font-size: 30px;
+}
+
+.container{
+    position: relative;
+    display: flex;
+    flex-direction:row;
+}
+
+body{
+
+}
+
+.table1{
+    position: absolute;
+}
+
+.table2{
+    position: absolute;
 }
