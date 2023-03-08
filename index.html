@@ -1,5 +1,6 @@
 <html>
   <head>
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0" />
     <title>Token Test Harness</title>
     <link href='https://fonts.googleapis.com/css?family=Work Sans' rel='stylesheet'>
     <style>
@@ -9,6 +10,7 @@
        button{font-weight: bold;font-family: "Work Sans", sans-serif;}
        td{vertical-align: middle;}
     </style>
+    <link rel="stylesheet" href="style.css">
     <script src='https://unpkg.com/xrpl@2.2.3'></script>
     <script src='ripplex1-send-xrp.js'></script>
     <script>
@@ -24,8 +26,9 @@
 <!-- ************************************************************** -->
 
   <body>
-    <h1>Token Test Harness</h1>
-    <form id="theForm">
+    <h1 class="pagetitle">Token Test Harness</h1>
+    <div class="standby_wallet">
+      <form id="theForm">
       Choose your ledger instance:  
       &nbsp;&nbsp;
       <input type="radio" id="tn" name="server"
@@ -223,6 +226,6 @@
           </td>
         </tr>
       </table>
-    </form>
+      </form>
   </body>
 </html>
