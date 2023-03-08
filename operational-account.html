@@ -9,6 +9,7 @@
        input, button {padding: 6px;margin-bottom: 8px;}
        button{font-weight: bold;font-family: "Work Sans", sans-serif;}
        td{vertical-align: middle;}
+       .sb{display: none;}
     </style>
     <link rel="stylesheet" href="style.css">
     <script src='https://unpkg.com/xrpl@2.2.3'></script>
@@ -38,7 +39,7 @@
         value="wss://s.devnet.rippletest.net:51233">
       <label for="devnet">Devnet</label>
   
-      <p>
+      <p class="sb">
         <textarea id="standbyResultField" class="input"   rows="3" placeholder="standby account Results" ></textarea>
       </p>
 
@@ -52,12 +53,102 @@
 
       <button class="button" type="button" onClick="getAccountsFromSeeds()">Get Accounts From Seeds</button>
 
-      <button type="button" class="secbutton" onClick="getAccount('standby')">Get New Standby Account</button>
+      <button type="button" class="secbutton" onClick="getAccount('operational')">Get New Operational Account</button>
 
 
       <table class="table">
         <tr>
           <td>
+            <table>
+              <tr>
+                <td>
+                <td>
+                  <table>
+                    <tr>
+                      <td>
+                        
+                      </td>
+                      <td>
+                        <p class="input_header">Operational Account </p>
+                        <input type="text" class="n_input" id="operationalAccountField" size="40"></input>
+                        <br>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td align="right">
+                        
+                      </td>
+                      <td>
+                        <p class="input_header">Public Key</p>
+                        <input type="text" class="n_input" id="operationalPubKeyField" size="40"></input>
+                        <br>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td align="right">
+                        
+                      </td>
+                      <td>
+                        <p class="input_header">Private Key</p>
+                        <input type="text" class="n_input" id="operationalPrivKeyField" size="40"></input>
+                        <br>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td align="right">
+                        
+                      </td>
+                      <td>
+                        <p class="input_header">Seed </p>
+                        <input type="text" class="n_input" id="operationalSeedField" size="40"></input>
+                        <br>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td align="right">
+                        
+                      </td>
+                      <td>
+                        <p class="input_header">XRP Balance </p>
+                        <input type="text" class="n_input" id="operationalBalanceField" size="40"></input>
+                        <br>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td align="right">
+                        
+                      </td>
+                      <td>
+                        <p class="input_header">Amount </p>
+                        <input type="text" class="n_input" id="operationalAmountField" size="40"></input>
+                        <br>
+                      </td>
+                    </tr>
+                   <tr>
+                      <td align="right">
+                        
+                      </td>
+                      <td>
+                        <p class="input_header">Destination Address </p>
+                        <input type="text" class="n_input" id="operationalDestinationField" size="40"></input>
+                        <br><br>
+                        <button type="button" class="button" onClick="oPsendXRP()">Send XRP&#62;</button>
+                      </td>
+                    </tr>
+                    
+                  </table>
+                </td>
+                </td>
+              </tr>
+            </table>
+          </td>
+
+
+
+
+
+
+          <td class="sb">
             <table>
               <tr>
                 <td>
@@ -134,15 +225,21 @@
                         <button type="button" class="button" onClick="sendXRP()">Send XRP&#62;</button>
                       </td>
                     </tr>
-                    
                   </table>
                 </td>
                 </td>
               </tr>
             </table>
           </td>
+
+
+
+
         </tr>
       </table>
     </form>
+
+
   </body>
+
 </html>
