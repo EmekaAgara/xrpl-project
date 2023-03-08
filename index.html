@@ -39,18 +39,21 @@
       <label for="devnet">Devnet</label>
   
       <p>
-        <textarea id="standbyResultField"  cols="40" rows="3" placeholder="standby account Results" ></textarea>
+        <textarea id="standbyResultField" class="input"   rows="3" placeholder="standby account Results" ></textarea>
       </p>
 
       <p>
-        <textarea id="operationalResultField" cols="40" rows="3" placeholder="operational account Results" ></textarea>
+        <textarea id="operationalResultField" class="input"  rows="3" placeholder="operational account Results" ></textarea>
       </p>
 
 
-      <textarea id="seeds" cols="40" rows= "3" placeholder="paste Account Seed here"></textarea>
-      <br/>
-      <button type="button" onClick="getAccountsFromSeeds()">Get Accounts From Seeds</button>
+      <textarea id="seeds" class="input"  rows= "3" placeholder="paste Account Seed here"></textarea>
       <br/><br/>
+
+      <button class="button" type="button" onClick="getAccountsFromSeeds()">Get Accounts From Seeds</button>
+      <br/><br/>
+
+
       <table style="display: inline-block;">
         <tr valign="top">
           <td>
