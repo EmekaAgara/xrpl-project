@@ -1,17 +1,20 @@
 <html>
   <head>
-    <title>Token Test Harness</title>
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0" />
+    <title>Create TrustLine||Standby Account</title>
     <link href='https://fonts.googleapis.com/css?family=Work Sans' rel='stylesheet'>
     <style>
-       body{font-family: "Work Sans", sans-serif;padding: 20px;background: #fafafa;}
+       body{font-family: "Work Sans", sans-serif;padding: 20px;background: #fafafa;max-width: 100% ;overflow-x: hidden;}
        h1{font-weight: bold;}
        input, button {padding: 6px;margin-bottom: 8px;}
        button{font-weight: bold;font-family: "Work Sans", sans-serif;}
        td{vertical-align: middle;}
+       .ow{display: none;}
     </style>    
     <script src='https://unpkg.com/xrpl@2.2.3'></script>
     <script src='ripplex1-send-xrp.js'></script>
     <script src='ripplex2-send-currency.js'></script>
+    <link rel="stylesheet" href="style.css">
     <script>
       if (typeof module !== "undefined") {
         const xrpl = require('xrpl')
@@ -24,7 +27,7 @@
 <!-- ************************************************************** -->
 
   <body>
-    <h1>Token Test Harness</h1>
+    <h1>Standby Account TrustLine</h1>
     <form id="theForm">
       Choose your ledger instance:  
       &nbsp;&nbsp;
@@ -35,115 +38,162 @@
       <input type="radio" id="dn" name="server"
         value="wss://s.devnet.rippletest.net:51233">
       <label for="devnet">Devnet</label>
+
+      <p>
+        <textarea id="standbyResultField" class="input"   rows="3" placeholder="standby account Results" ></textarea>
+      </p>
+
+      <p class="ow">
+        <textarea id="operationalResultField" class="input"  rows="3" placeholder="operational account Results" ></textarea>
+      </p>
+
+
+      <textarea id="seeds" class="input"  rows= "3" placeholder="paste Account Seed here"></textarea>
       <br/><br/>
-      <button type="button" onClick="getAccountsFromSeeds()">Get Accounts From Seeds</button>
-      <br/>
-      <textarea id="seeds" cols="40" rows= "2"></textarea>
-      <br/><br/>
-      <table>
-        <tr valign="top">
+
+      <button class="button" type="button" onClick="getAccountsFromSeeds()">Get Accounts From Seeds</button>
+
+      <button type="button" class="secbutton" onClick="getAccount('standby')">Get New Standby Account</button>
+
+
+      <table class="table">
+        <tr>
           <td>
             <table>
-              <tr valign="top">
+              <tr>
                 <td>
                 <td>
-                  <button type="button" onClick="getAccount('standby')">Get New Standby Account</button>
+
                   <table>
-                    <tr valign="top">
-                      <td align="right">
-                        Standby Account
+                    <tr>
+                      <td>
+                        
                       </td>
                       <td>
-                        <input type="text" id="standbyAccountField" size="40"></input>
+                        <p class="input_header">
+                          Standby Account
+                        </p>
+                        <input type="text" class="input" id="standbyAccountField" size="40"></input>
                         <br>
                       </td>
                     </tr>
                     <tr>
-                      <td align="right">
-                        Public Key
+                      <td>
                       </td>
                       <td>
+                        <p class="input_header">
+                          Public Key
+                        </p>
                         <input type="text" id="standbyPubKeyField" size="40"></input>
                         <br>
                       </td>
                     </tr>
                     <tr>
-                      <td align="right">
-                        Private Key
+                      <td>
+
                       </td>
                       <td>
+                        <p class="input_header">
+                          Private Key
+                        </p>
                         <input type="text" id="standbyPrivKeyField" size="40"></input>
                         <br>
                       </td>
                     </tr>
                     <tr>
-                      <td align="right">
-                        Seed
+                      <td>
+
                       </td>
                       <td>
+                        <p class="input_header">
+                          Seed
+                        </p>
                         <input type="text" id="standbySeedField" size="40"></input>
                         <br>
                       </td>
                     </tr>
                     <tr>
-                      <td align="right">
-                        XRP Balance
+                      <td>
+
                       </td>
                       <td>
+                        <p class="input_header">
+                          XRP Balance
+                        </p>
                         <input type="text" id="standbyBalanceField" size="40"></input>
                         <br>
                       </td>
                     </tr>
                     <tr>
-                      <td align="right">
-                        Amount
+                      <td>
+
                       </td>
                       <td>
+                        <p class="input_header">
+                          Amount
+                        </p>
                         <input type="text" id="standbyAmountField" size="40"></input>
                         <br>
                       </td>
                     </tr>
                     <tr>
-                      <td align="right">
-                        Destination
+                      <td>
+
                       </td>
                       <td>
+                        <p class="input_header">
+                          Destination
+                        </p>
                         <input type="text" id="standbyDestinationField" size="40"></input>
                         <br>
                       </td>
                     </tr>
                     <tr valign="top">
-                      <td><button type="button" onClick="configureAccount('standby',document.querySelector('#standbyDefault').checked)">Configure Account</button></td>
+                      <!-- <td><button type="button" onClick="configureAccount('standby',document.querySelector('#standbyDefault').checked)">Configure Account</button></td>
                       <td>
                         <input type="checkbox" id="standbyDefault" checked="true"/>
                         <label for="standbyDefault">Allow Rippling</label>
-                      </td>
+                      </td> -->
                     </tr>
                     <tr>
-                      <td align="right">
-                        Currency
+                      <td>
+
                       </td>
                       <td>
+                        <p class="input_header">
+                          Currency
+                        </p>
                         <input type="text" id="standbyCurrencyField" size="40" value="USD"></input>
+                        <br><br>
+                        <input type="checkbox" id="operationalDefault" checked="true"/>
+                        <label for="operationalDefault">Allow Rippling</label>
+                        <br><br>
+                        <button type="button" class="button" onClick="sendXRP()">Send XRP&#62;</button>
+                        <button type="button" class="button" onClick="configureAccount('standby',document.querySelector('#standbyDefault').checked)">Configure Account</button>
+                        <button type="button" class="button" onClick="createTrustline()">Create Trustline</button>
+                        <button type="button" class="button" onClick="sendCurrency()">Send Currency</button>
+                        <button type="button" class="button" onClick="getBalances()">Get Balances</button>
+                        
                       </td>
                     </tr>
                   </table>
-                  <p align="left">
-                    <textarea id="standbyResultField" cols="80" rows="20" ></textarea>
-                  </p>
+
                 </td>
                 </td>
+
+
                 <td>
                   <table>
                     <tr valign="top">
                       <td align="center" valign="top">
-                        <button type="button" onClick="sendXRP()">Send XRP&#62;</button>
+
+                        <!-- <button type="button" onClick="sendXRP()">Send XRP&#62;</button>
                         <br/><br/>
                         <button type="button" onClick="createTrustline()">Create TrustLine</button>
                         <br/>
                         <button type="button" onClick="sendCurrency()">Send Currency</button>
                         <br/>
-                        <button type="button" onClick="getBalances()">Get Balances</button>
+                        <button type="button" onClick="getBalances()">Get Balances</button> -->
                       </td>
                     </tr>
                     </td>
@@ -153,7 +203,9 @@
               </tr>
             </table>
           </td>
-          <td>
+
+
+          <td class="ow">
             <table>
               <tr>
                 <td>

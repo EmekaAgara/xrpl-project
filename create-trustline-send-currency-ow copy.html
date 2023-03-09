@@ -57,6 +57,135 @@
 
 
       <table class="table">
+
+        <td>
+          <table>
+            <tr valign="top">
+              <td>
+              <td>
+                <button type="button" onClick="getAccount('standby')">Get New Standby Account</button>
+                <table>
+                  <tr valign="top">
+                    <td align="right">
+                      Standby Account
+                    </td>
+                    <td>
+                      <input type="text" id="standbyAccountField" size="40"></input>
+                      <br>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td align="right">
+                      Public Key
+                    </td>
+                    <td>
+                      <input type="text" id="standbyPubKeyField" size="40"></input>
+                      <br>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td align="right">
+                      Private Key
+                    </td>
+                    <td>
+                      <input type="text" id="standbyPrivKeyField" size="40"></input>
+                      <br>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td align="right">
+                      Seed
+                    </td>
+                    <td>
+                      <input type="text" id="standbySeedField" size="40"></input>
+                      <br>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td align="right">
+                      XRP Balance
+                    </td>
+                    <td>
+                      <input type="text" id="standbyBalanceField" size="40"></input>
+                      <br>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td align="right">
+                      Amount
+                    </td>
+                    <td>
+                      <input type="text" id="standbyAmountField" size="40"></input>
+                      <br>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td align="right">
+                      Destination
+                    </td>
+                    <td>
+                      <input type="text" id="standbyDestinationField" size="40"></input>
+                      <br>
+                    </td>
+                  </tr>
+                  <tr valign="top">
+                    <td><button type="button" onClick="configureAccount('standby',document.querySelector('#standbyDefault').checked)">Configure Account</button></td>
+                    <td>
+                      <input type="checkbox" id="standbyDefault" checked="true"/>
+                      <label for="standbyDefault">Allow Rippling</label>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td align="right">
+                      Currency
+                    </td>
+                    <td>
+                      <input type="text" id="standbyCurrencyField" size="40" value="USD"></input>
+                    </td>
+                  </tr>
+                </table>
+                <p align="left">
+                  <textarea id="standbyResultField" cols="80" rows="20" ></textarea>
+                </p>
+              </td>
+              </td>
+              <td>
+                <table>
+                  <tr valign="top">
+                    <td align="center" valign="top">
+                      <button type="button" onClick="sendXRP()">Send XRP&#62;</button>
+                      <br/><br/>
+                      <button type="button" onClick="createTrustline()">Create TrustLine</button>
+                      <br/>
+                      <button type="button" onClick="sendCurrency()">Send Currency</button>
+                      <br/>
+                      <button type="button" onClick="getBalances()">Get Balances</button>
+                    </td>
+                  </tr>
+                  </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+        </td>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         <tr>
           <td>
             <table>
