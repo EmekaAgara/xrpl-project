@@ -1,0 +1,281 @@
+<html>
+  <head>
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0" />
+    <title>Get New||Operational Account</title>
+    <link href='https://fonts.googleapis.com/css?family=Work Sans' rel='stylesheet'>
+    <style>
+       body{font-family: "Work Sans", sans-serif;padding: 20px;background: #fafafa;max-width: 100%;overflow-x: hidden;}
+       h1{font-weight: bold;}
+       input, button {padding: 6px;margin-bottom: 8px;}
+       button{font-weight: bold;font-family: "Work Sans", sans-serif;}
+       td{vertical-align: middle;}
+       .ow{display: none;}
+    </style>
+    <link rel="stylesheet" href="style.css">
+    <script src='https://unpkg.com/xrpl@2.2.3'></script>
+    <script src='ripplex1-send-xrp.js'></script>
+    <script>
+      if (typeof module !== "undefined") {
+        const xrpl = require('xrpl')
+      }
+
+    </script>
+  </head>
+  
+<!-- ************************************************************** -->
+<!-- ********************** The Form ****************************** -->
+<!-- ************************************************************** -->
+
+  <body>
+    <!-- <h1 class="pagetitle">New Standby Account</h1> -->
+    <div class="bcard">
+      <p class="cardinput_header">XRP Balance (XRP) </p>
+      <input type="text" value="0.0000" class="card_input" id="operationalBalanceField" size="10"></input>
+    </div>
+
+
+      <form id="theForm">
+      Ledger instance:  
+      &nbsp;&nbsp;
+      <input type="radio" id="tn" name="server"
+        value="wss://s.altnet.rippletest.net:51233" checked>
+      <label for="testnet">Testnet</label>
+      &nbsp;&nbsp;
+      <input type="radio" id="dn" name="server"
+        value="wss://s.devnet.rippletest.net:51233">
+      <label for="devnet">Devnet</label>
+      <br><br>
+
+      <div class="account_d_card">
+        <p class="input_header">Operational Account </p>
+        <input type="text" class="n_input" id="operationalAccountField" size="20"></input>
+
+        <p class="input_header">Public Key</p>
+        <input type="text" class="n_input" id="operationalPubKeyField" size="20"></input>
+
+        <p class="input_header">Private Key</p>
+        <input type="text" class="n_input" id="operationalPrivKeyField" size="20"></input>
+
+        <p class="input_header">Seed </p>
+        <input type="text" class="n_input" id="operationalSeedField" size="20"></input>
+
+      </div>
+
+  
+  
+
+
+      <p class="ow">
+        <textarea id="standbyResultField" class="input"   rows="3" placeholder="standby account Results" ></textarea>
+      </p>
+
+      <p>
+        <textarea id="operationalResultField" class="input"  rows="3" placeholder="operational account Results" ></textarea>
+      </p>
+
+
+      <!-- <textarea id="seeds" class="input"  rows= "3" placeholder="paste Account Seed here"></textarea> -->
+      <!-- <br/><br/> -->
+
+      <!-- <button class="button" type="button" onClick="getAccountsFromSeeds()">Get Accounts From Seeds</button> -->
+
+      <button type="button" class="button" onClick="getAccount('operational')">Get New Operational Account</button>
+      
+
+      <table class="table">
+        <tr>
+          <td>
+            <table>
+              <tr>
+                <td>
+                <td>
+                  <table>
+                    <tr>
+                      <td>
+                        
+                      </td>
+                      <td class="ow">
+                        <p class="">Standby Account </p>
+                        <input type="text" class="n_input" id="standbyAccountField" size="40"></input>
+                        <br>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td align="right">
+                        
+                      </td>
+                      <td class="ow">
+                        <p class="input_header">Public Key</p>
+                        <input type="text" class="n_input" id="standbyPubKeyField" size="40"></input>
+                        <br>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td align="right">
+                        
+                      </td>
+                      <td class="ow">
+                        <p class="input_header">Private Key</p>
+                        <input type="text" class="n_input" id="standbyPrivKeyField" size="40"></input>
+                        <br>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td align="right">
+                        
+                      </td>
+                      <td class="ow">
+                        <p class="input_header">Seed </p>
+                        <input type="text" class="n_input" id="standbySeedField" size="40"></input>
+                        <br>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td align="right">
+                        
+                      </td>
+                      <td class="ow">
+                        <p class="input_header">XRP Balance </p>
+                        <input type="text" class="n_input" id="standbyBalanceField" size="40"></input>
+                        <br>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td align="right">
+                        
+                      </td>
+                      <td class="ow">
+                        <p class="text_input_header">Amount </p>
+                        <input type="text" class="text_input" id="standbyAmountField" size="40"></input>
+                        <br>
+                      </td>
+                    </tr>
+                   <tr>
+                      <td align="right">
+                        
+                      </td>
+                      <td class="ow">
+                        <p class="text_input_header">Recipient Address </p>
+                        <input type="text" class="text_input" id="standbyDestinationField" size="40"></input>
+                        <br><br>
+                        <button type="button" class="button" onClick="sendXRP()">Send XRP&#62;</button>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+
+
+
+
+
+
+
+
+<!-- OPERATIONAL WALLET -->
+
+        <td>
+          <table class="ow">
+            <tr>
+              <td>
+                <table>
+                  <tr>
+                    <td align="center" valign="top">
+                      <button type="button" onClick="oPsendXRP()">&#60;Send XRP</button>
+                      </td>
+                      <td align="right">
+                        <button type="button" onClick="getAccount('operational')">Get New Operational Account</button>
+                      <table>
+                        <tr valign="top">
+                          <td align="right">
+                            Operational Account
+                          </td>
+                          <td>
+                            <input type="text" id="operationalAccountField" size="40"></input>
+                            <br>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td align="right">
+                            Public Key
+                          </td>
+                          <td>
+                            <input type="text" id="operationalPubKeyField" size="40"></input>
+                            <br>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td align="right">
+                            Private Key
+                          </td>
+                          <td>
+                            <input type="text" id="operationalPrivKeyField" size="40"></input>
+                            <br>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td align="right">
+                            Seed
+                          </td>
+                          <td>
+                            <input type="text" id="operationalSeedField" size="40"></input>
+                            <br>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td align="right">
+                            XRP Balance
+                          </td>
+                          <td>
+                            <input type="text" id="operationalBalanceField" size="40"></input>
+                            <br>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td align="right">
+                            Amount
+                          </td>
+                          <td>
+                            <input type="text" id="operationalAmountField" size="40"></input>
+                            <br>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td align="right">
+                            Destination
+                          </td>
+                          <td>
+                            <input type="text" id="operationalDestinationField" size="40"></input>
+                            <br>
+                          </td>
+                        </tr>
+                      </table>
+                      <p align="right">
+                        <textarea id="operationalResultField" cols="80" rows="20" ></textarea>
+                      </p>
+                    </td>
+                    </td>
+                  </tr>
+                  </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      </table>
+    </form>
+
+
+  </body>
+
+
+
+
+  
+</html>
