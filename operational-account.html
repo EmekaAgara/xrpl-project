@@ -1,7 +1,7 @@
 <html>
   <head>
     <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0" />
-    <title>Get Account||Operational Account</title>
+    <title>Send XRP Account||Operational Account</title>
     <link href='https://fonts.googleapis.com/css?family=Work Sans' rel='stylesheet'>
     <style>
        body{font-family: "Work Sans", sans-serif;padding: 20px;background: #fafafa;max-width: 100%;overflow-x: hidden;}
@@ -27,7 +27,14 @@
 <!-- ************************************************************** -->
 
   <body>
-    <h1 class="pagetitle">Operational Account </h1>
+    <!-- <h1 class="pagetitle">Operational Account </h1> -->
+
+    <div class="bcard">
+      <p class="cardinput_header">XRP Balance (XRP) </p>
+      <input type="text" value="0.0000" class="card_input" id="operationalBalanceField" size="12"></input>
+    </div>
+
+
       <form id="theForm">
       Ledger instance:  
       &nbsp;&nbsp;
@@ -53,7 +60,7 @@
 
       <button class="button" type="button" onClick="getAccountsFromSeeds()">Get Accounts From Seeds</button>
 
-      <button type="button" class="secbutton" onClick="getAccount('operational')">Get New Operational Account</button>
+      <!-- <button type="button" class="secbutton" onClick="getAccount('operational')">Get New Operational Account</button> -->
 
 
       <table class="table">
@@ -63,12 +70,12 @@
               <tr>
                 <td>
                 <td>
-                  <table>
+                  <table class="account_d_card">
                     <tr>
                       <td>
                         
                       </td>
-                      <td>
+                      <td class="sb">
                         <p class="input_header">Operational Account </p>
                         <input type="text" class="n_input" id="operationalAccountField" size="40"></input>
                         <br>
@@ -78,7 +85,7 @@
                       <td align="right">
                         
                       </td>
-                      <td>
+                      <td class="sb">
                         <p class="input_header">Public Key</p>
                         <input type="text" class="n_input" id="operationalPubKeyField" size="40"></input>
                         <br>
@@ -88,7 +95,7 @@
                       <td align="right">
                         
                       </td>
-                      <td>
+                      <td class="sb">
                         <p class="input_header">Private Key</p>
                         <input type="text" class="n_input" id="operationalPrivKeyField" size="40"></input>
                         <br>
@@ -98,7 +105,7 @@
                       <td align="right">
                         
                       </td>
-                      <td>
+                      <td class="sb">
                         <p class="input_header">Seed </p>
                         <input type="text" class="n_input" id="operationalSeedField" size="40"></input>
                         <br>
@@ -108,7 +115,7 @@
                       <td align="right">
                         
                       </td>
-                      <td>
+                      <td class="sb">
                         <p class="input_header">XRP Balance </p>
                         <input type="text" class="n_input" id="operationalBalanceField" size="40"></input>
                         <br>
@@ -120,7 +127,7 @@
                       </td>
                       <td>
                         <p class="input_header">Amount </p>
-                        <input type="text" class="n_input" id="operationalAmountField" size="40"></input>
+                        <input type="text" class="text_input" id="operationalAmountField" size="40"></input>
                         <br>
                       </td>
                     </tr>
@@ -130,9 +137,9 @@
                       </td>
                       <td>
                         <p class="input_header">Destination Address </p>
-                        <input type="text" class="n_input" id="operationalDestinationField" size="40"></input>
+                        <input type="text" class="text_input" id="operationalDestinationField" size="40"></input>
                         <br><br>
-                        <button type="button" class="button" onClick="oPsendXRP()">Send XRP&#62;</button>
+                        <button type="button" class="black_button" onClick="oPsendXRP()">Send XRP</button>
                       </td>
                     </tr>
                     
