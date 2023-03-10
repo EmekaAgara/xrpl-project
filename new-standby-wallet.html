@@ -1,7 +1,7 @@
 <html>
   <head>
     <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0" />
-    <title>Get Account||Standby Account</title>
+    <title>Get New||Standby Account</title>
     <link href='https://fonts.googleapis.com/css?family=Work Sans' rel='stylesheet'>
     <style>
        body{font-family: "Work Sans", sans-serif;padding: 20px;background: #fafafa;max-width: 100%;overflow-x: hidden;}
@@ -27,11 +27,12 @@
 <!-- ************************************************************** -->
 
   <body>
-    <h1 class="pagetitle">Standby Account</h1>
+    <h1 class="pagetitle">New Standby Account</h1>
     <div class="bcard">
       <p class="cardinput_header">XRP Balance (XRP) </p>
       <input type="text" value="0.0000" class="card_input" id="standbyBalanceField" size="10"></input>
     </div>
+
 
       <form id="theForm">
       Ledger instance:  
@@ -43,8 +44,26 @@
       <input type="radio" id="dn" name="server"
         value="wss://s.devnet.rippletest.net:51233">
       <label for="devnet">Devnet</label>
-
       <br><br>
+
+      <div class="account_d_card">
+        <p class="input_header">Standby Account </p>
+        <input type="text" class="n_input" id="standbyAccountField" size="20"></input>
+
+        <p class="input_header">Public Key</p>
+        <input type="text" class="n_input" id="standbyPubKeyField" size="20"></input>
+
+        <p class="input_header">Private Key</p>
+        <input type="text" class="n_input" id="standbyPrivKeyField" size="20"></input>
+
+        <p class="input_header">Seed </p>
+        <input type="text" class="n_input" id="standbySeedField" size="20"></input>
+
+      </div>
+
+  
+  
+
 
       <p>
         <textarea id="standbyResultField" class="input"   rows="3" placeholder="standby account Results" ></textarea>
@@ -55,12 +74,12 @@
       </p>
 
 
-      <textarea id="seeds" class="input"  rows= "3" placeholder="paste Account Seed here"></textarea>
-      <br/><br/>
+      <!-- <textarea id="seeds" class="input"  rows= "3" placeholder="paste Account Seed here"></textarea> -->
+      <!-- <br/><br/> -->
 
-      <button class="button" type="button" onClick="getAccountsFromSeeds()">Get Accounts From Seeds</button>
+      <!-- <button class="button" type="button" onClick="getAccountsFromSeeds()">Get Accounts From Seeds</button> -->
 
-      <!-- <button type="button" class="secbutton" onClick="getAccount('standby')">Get New Standby Account</button> -->
+      <button type="button" class="button" onClick="getAccount('standby')">Get New Standby Account</button>
       
 
       <table class="table">
@@ -70,13 +89,13 @@
               <tr>
                 <td>
                 <td>
-                  <table class="account_d_card">
+                  <table>
                     <tr>
                       <td>
                         
                       </td>
                       <td class="ow">
-                        <p class="input_header">Standby Account </p>
+                        <p class="">Standby Account </p>
                         <input type="text" class="n_input" id="standbyAccountField" size="40"></input>
                         <br>
                       </td>
@@ -125,8 +144,8 @@
                       <td align="right">
                         
                       </td>
-                      <td>
-                        <p class="input_header">Amount </p>
+                      <td class="ow">
+                        <p class="text_input_header">Amount </p>
                         <input type="text" class="text_input" id="standbyAmountField" size="40"></input>
                         <br>
                       </td>
@@ -135,11 +154,11 @@
                       <td align="right">
                         
                       </td>
-                      <td>
-                        <p class="input_header">Destination Address </p>
+                      <td class="ow">
+                        <p class="text_input_header">Recipient Address </p>
                         <input type="text" class="text_input" id="standbyDestinationField" size="40"></input>
                         <br><br>
-                        <button type="button" class="black_button" onClick="sendXRP()">Send XRP&#62;</button>
+                        <button type="button" class="button" onClick="sendXRP()">Send XRP&#62;</button>
                       </td>
                     </tr>
                   </table>
@@ -149,6 +168,10 @@
             </table>
           </td>
         </tr>
+
+
+
+
 
 
 
