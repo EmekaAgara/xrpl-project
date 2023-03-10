@@ -23,6 +23,8 @@
     border-radius: 7px;
     /* padding-bottom: 120px; */
     padding: 30px;
+    padding-top: 0;
+    padding-bottom: 25;
     margin-bottom: 10px;
     /* background-image: url('./assets/balancecard.png'); */
     background-image: url('./assets/balancecard1.png');
