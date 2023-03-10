@@ -2,6 +2,36 @@
     font-size: 30px;
 }
 
+.bcard{
+    /* width: 88%; */
+    max-width: 88%;
+    /* padding: 4px; */
+    background-color: #8d8d9c;
+    border-radius: 7px;
+    /* padding-bottom: 120px; */
+    padding: 30px;
+    margin-bottom: 10px;
+    /* background-image: url('./assets/balancecard.png'); */
+    background-image: url('./assets/balancecard1.png');
+}
+
+.card_input{
+    background: none;
+    border: none;
+    font-size: 40px;
+    color: white;
+    margin: 0px;
+    padding: 0;
+
+}
+
+.cardinput_header{
+    color: rgb(237, 237, 237);
+    margin: 0px;
+    margin-bottom: 7px;
+    font-size: 16px;
+}
+
 
 
 .input{

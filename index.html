@@ -28,6 +28,11 @@
 
   <body>
     <h1 class="pagetitle">Standby Account</h1>
+    <div class="bcard">
+      <p class="cardinput_header">XRP Balance (XRP) </p>
+      <input type="text" value="0.0000" class="card_input" id="standbyBalanceField" size="18"></input>
+    </div>
+
       <form id="theForm">
       Ledger instance:  
       &nbsp;&nbsp;
@@ -39,6 +44,8 @@
         value="wss://s.devnet.rippletest.net:51233">
       <label for="devnet">Devnet</label>
   
+
+
       <p>
         <textarea id="standbyResultField" class="input"   rows="3" placeholder="standby account Results" ></textarea>
       </p>
@@ -54,7 +61,7 @@
       <button class="button" type="button" onClick="getAccountsFromSeeds()">Get Accounts From Seeds</button>
 
       <button type="button" class="secbutton" onClick="getAccount('standby')">Get New Standby Account</button>
-
+      
 
       <table class="table">
         <tr>
