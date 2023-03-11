@@ -175,8 +175,7 @@
         document.getElementById('standbyResultField').value = results
 
 
-        document.getElementById('standbyUsdBalanceField').value = results
-        // document.getElementById('operationalUsdBalanceField').value = results
+
       
         results= "\nGetting operational account balances...\n"
         const operational_balances = await client.request({
@@ -188,6 +187,7 @@
         document.getElementById('operationalResultField').value = results
 
 
+
         
       
         document.getElementById('operationalBalanceField').value = 
@@ -195,6 +195,10 @@
         document.getElementById('standbyBalanceField').value = 
           (await client.getXrpBalance(standby_wallet.address))
         document.getElementById('operationalResultField').value = results
+
+        document.getElementById('operationalUsdBalanceField').value = results.operational_balance,
+        document.getElementById('standbyUsdBalanceField').value = results.operational_balances
+        
           
         client.disconnect()
        

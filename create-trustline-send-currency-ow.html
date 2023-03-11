@@ -27,7 +27,6 @@
 <!-- ************************************************************** -->
 
   <body>
-    <!-- <h1>Operational Account TrustLine</h1> -->
 
     <div class="bcard">
       <p class="cardinput_header">XRP Balance (XRP) </p>
@@ -65,7 +64,6 @@
 
       <button class="button" type="button" onClick="getAccountsFromSeeds()">Get Accounts From Seeds</button>
 
-      <!-- <button type="button" class="secbutton" onClick="getAccount('operational')">Get New Operational Account</button> -->
 
 
       <table class="table">
@@ -176,11 +174,11 @@
                         <input type="checkbox" id="operationalDefault" checked="true"/>
                         <label for="operationalDefault">Allow Rippling</label>
                         <br><br>
-                        <!-- <button type="button" class="button" onClick="sendXRP()">Send XRP&#62;</button> -->
+
                         <button type="button" class="button" onClick="configureAccount('standby',document.querySelector('#standbyDefault').checked)">Configure Account</button>
                         <button type="button" class="button" onClick="createTrustline()">Create Trustline</button>
                         <button type="button" class="button" onClick="sendCurrency()">Send Currency</button>
-                        <button type="button" class="button" onClick="getBalances()">Get Balances</button>
+                        <!-- <button type="button" class="button" onClick="getBalances()">Get Balances</button> -->
                         
                       </td>
                     </tr>
@@ -194,14 +192,6 @@
                   <table>
                     <tr valign="top">
                       <td align="center" valign="top">
-
-                        <!-- <button type="button" onClick="sendXRP()">Send XRP&#62;</button>
-                        <br/><br/>
-                        <button type="button" onClick="createTrustline()">Create TrustLine</button>
-                        <br/>
-                        <button type="button" onClick="sendCurrency()">Send Currency</button>
-                        <br/>
-                        <button type="button" onClick="getBalances()">Get Balances</button> -->
                       </td>
                     </tr>
                     </td>
@@ -294,15 +284,10 @@
   
                               <p class="input_header">Currency</p>
                               <input type="text" class="text_input" value="USD" id="operationalCurrencyField" size="40"></input>
-                              <!-- <br> -->
-  
-                              <!-- <br><br> -->
-                              <!-- <button type="button" class="black_button" onClick="sendXRP()">Send XRP</button> -->
+
                               <input type="checkbox" id="operationalDefault" checked="true"/>
                               <label for="operationalDefault">Allow Rippling</label>
                               <br><br>
-                              <!-- <button type="button" class="button" onClick="sendXRP()">Send XRP&#62;</button> -->
-                              <!-- <button type="button" class="black_button" onClick="configureAccount('standby',document.querySelector('#standbyDefault').checked)">Configure Account</button> -->
                               <button type="button" class="black_button" onClick="oPcreateTrustline()">Create Trustline</button>
                               <button type="button" class="black_button" onClick="oPsendCurrency()">Send Currency</button>
                               <button type="button" class="black_button" onClick="getBalances()">Get Balances</button>
@@ -316,108 +301,6 @@
                             <td>
                               
                             </td>
-                            <!-- <td>
-                              <p class="input_header">
-                                Operational Account
-                              </p>
-                              <input type="text" class="n_input" id="operationalAccountField" size="40"></input>
-                              <br>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td>
-                            </td>
-                            <td>
-                              <p class="input_header">
-                                Public Key
-                              </p>
-                              <input type="text" class="n_input" id="operationalPubKeyField" size="40"></input>
-                              <br>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td>
-                            </td>
-                            <td>
-                              <p class="input_header">
-                                Private Key
-                              </p>
-                              <input type="text" class="n_input" id="operationalPrivKeyField" size="40"></input>
-                              <br>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td>
-                            </td>
-                            <td>
-                              <p class="input_header">
-                                Seed
-                              </p>
-                              <input type="text" class="n_input" id="operationalSeedField" size="40"></input>
-                              <br>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td>
-                            </td>
-                            <td>
-                              <p class="input_header">
-                                XRP Balance
-                              </p>
-                              <input type="text" class="n_input" id="operationalBalanceField" size="40"></input>
-                              <br>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td>
-                            </td>
-                            <td>
-                              <p class="input_header">
-                                Amount
-                              </p>
-                              <input type="text" class="n_input" id="operationalAmountField" size="40"></input>
-                              <br>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td>
-                            </td>
-                            <td>
-                              <p class="input_header">
-                                Destination
-                              </p>
-                              <input type="text" class="n_input" id="operationalDestinationField" size="40"></input>
-                              <br>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td>
-                            </td>
-                            <td align="right">
-
-                          </tr>
-                          <tr>
-                            <td>
-                            </td>
-                            <td>
-                              <p class="input_header">
-                                Currency
-                              </p>
-                              <input type="text" class="n_input" id="operationalCurrencyField" size="40" value="USD"></input>
-                              <br><br>
-                              <input type="checkbox" id="operationalDefault" checked="true"/>
-                              <label for="operationalDefault">Allow Rippling</label>
-                              <br><br>
-                              <button type="button" class="button" onClick="oPsendXRP()">Send XRP&#62;</button>
-                              <button type="button" class="button" onClick="configureAccount('operational',document.querySelector('#operationalbyDefault').checked)">Configure Account</button>
-                              <button type="button" class="button" onClick="oPcreateTrustline()">Create Trustline</button>
-                              <button type="button" class="button" onClick="oPsendCurrency()">Send Currency</button>
-                              <button type="button" class="button" onClick="getBalances()">Get Balances</button>
-                              
-                            </td>
-                          </tr> -->
-
-
 
                         </table>
 
