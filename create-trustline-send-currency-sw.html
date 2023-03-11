@@ -27,7 +27,7 @@
 <!-- ************************************************************** -->
 
   <body>
-    <h1>Standby Account TrustLine</h1>
+    <!-- <h1>Standby Account TrustLine</h1> -->
     <div class="bcard">
       <p class="cardinput_header">XRP Balance (XRP) </p>
       <input type="text" value="0.0000" class="card_input" id="standbyBalanceField" size="12"></input>
@@ -77,99 +77,95 @@
 
                   <table>
                     <tr>
-                      <table class="account_d_card">
-                        <tr>
-                          <td>
-                            
-                          </td>
-                          <td class="ow">
-                            <p class="input_header">Standby Account </p>
-                            <input type="text" class="n_input" id="standbyAccountField" size="40"></input>
-                            <br>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td align="right">
-                            
-                          </td>
-                          <td class="ow">
-                            <p class="input_header">Public Key</p>
-                            <input type="text" class="n_input" id="standbyPubKeyField" size="40"></input>
-                            <br>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td align="right">
-                            
-                          </td>
-                          <td class="ow">
-                            <p class="input_header">Private Key</p>
-                            <input type="text" class="n_input" id="standbyPrivKeyField" size="40"></input>
-                            <br>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td align="right">
-                            
-                          </td>
-                          <td class="ow">
-                            <p class="input_header">Seed </p>
-                            <input type="text" class="n_input" id="standbySeedField" size="40"></input>
-                            <br>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td align="right">
-                            
-                          </td>
-                          <td class="ow">
-                            <p class="input_header">XRP Balance </p>
-                            <input type="text" class="n_input" id="standbyBalanceField" size="40"></input>
-                            <br>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td align="right">
-                            
-                          </td>
-                          <td>
-                            <p class="input_header">Amount </p>
-                            <input type="text" class="text_input" id="standbyAmountField" size="40"></input>
-                            <br>
-                          </td>
-                        </tr>
-                       <tr>
-                          <td align="right">
-                            
-                          </td>
-                          <td>
-                            <p class="input_header">Destination Address </p>
-                            <input type="text" class="text_input" id="standbyDestinationField" size="40"></input>
-
-                            <p class="input_header">Currency</p>
-                            <input type="text" class="text_input" value="USD" id="standbyCurrencyField" size="40"></input>
-                            <!-- <br> -->
-
-                            <!-- <br><br> -->
-                            <!-- <button type="button" class="black_button" onClick="sendXRP()">Send XRP</button> -->
-                            <input type="checkbox" id="standbyDefault" checked="true"/>
-                            <label for="standbyDefault">Allow Rippling</label>
-                            <br><br>
-                            <!-- <button type="button" class="button" onClick="sendXRP()">Send XRP&#62;</button> -->
-                            <!-- <button type="button" class="black_button" onClick="configureAccount('standby',document.querySelector('#standbyDefault').checked)">Configure Account</button> -->
-                            <button type="button" class="black_button" onClick="createTrustline()">Create Trustline</button>
-                            <button type="button" class="black_button" onClick="sendCurrency()">Send Currency</button>
-                            <button type="button" class="black_button" onClick="getBalances()">Get Balances</button>
-                          </td>
-                        </tr>
-                      </table>
                     </td>
                       <td>
-                        <!-- <p class="input_header">
-                          Standby Account
-                        </p>
-                        <input type="text" class="n_input" id="standbyAccountField" size="40"></input>
-                        <br> -->
+                        <table class="account_d_card">
+                          <tr>
+                            <td>
+                              
+                            </td>
+                            <td class="ow">
+                              <p class="input_header">Standby Account </p>
+                              <input type="text" class="n_input" id="standbyAccountField" size="40"></input>
+                              <br>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td align="right">
+                              
+                            </td>
+                            <td class="ow">
+                              <p class="input_header">Public Key</p>
+                              <input type="text" class="n_input" id="standbyPubKeyField" size="40"></input>
+                              <br>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td align="right">
+                              
+                            </td>
+                            <td class="ow">
+                              <p class="input_header">Private Key</p>
+                              <input type="text" class="n_input" id="standbyPrivKeyField" size="40"></input>
+                              <br>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td align="right">
+                              
+                            </td>
+                            <td class="ow">
+                              <p class="input_header">Seed </p>
+                              <input type="text" class="n_input" id="standbySeedField" size="40"></input>
+                              <br>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td align="right">
+                              
+                            </td>
+                            <td class="ow">
+                              <p class="input_header">XRP Balance </p>
+                              <input type="text" class="n_input" id="standbyBalanceField" size="40"></input>
+                              <br>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td align="right">
+                              
+                            </td>
+                            <td>
+                              <p class="input_header">Amount </p>
+                              <input type="text" class="text_input" id="standbyAmountField" size="40"></input>
+                              <br>
+                            </td>
+                          </tr>
+                         <tr>
+                            <td align="right">
+                              
+                            </td>
+                            <td>
+                              <p class="input_header">Destination Address </p>
+                              <input type="text" class="text_input" id="standbyDestinationField" size="40"></input>
+  
+                              <p class="input_header">Currency</p>
+                              <input type="text" class="text_input" value="USD" id="standbyCurrencyField" size="40"></input>
+                              <!-- <br> -->
+  
+                              <!-- <br><br> -->
+                              <!-- <button type="button" class="black_button" onClick="sendXRP()">Send XRP</button> -->
+                              <input type="checkbox" id="standbyDefault" checked="true"/>
+                              <label for="standbyDefault">Allow Rippling</label>
+                              <br><br>
+                              <!-- <button type="button" class="button" onClick="sendXRP()">Send XRP&#62;</button> -->
+                              <!-- <button type="button" class="black_button" onClick="configureAccount('standby',document.querySelector('#standbyDefault').checked)">Configure Account</button> -->
+                              <button type="button" class="black_button" onClick="createTrustline()">Create Trustline</button>
+                              <button type="button" class="black_button" onClick="sendCurrency()">Send Currency</button>
+                              <button type="button" class="black_button" onClick="getBalances()">Get Balances</button>
+                            </td>
+                          </tr>
+                        </table>
+
                       </td>
                     </tr>
 

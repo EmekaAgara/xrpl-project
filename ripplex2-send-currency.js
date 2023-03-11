@@ -176,6 +176,7 @@
 
 
         document.getElementById('standbyUsdBalanceField').value = results
+        // document.getElementById('operationalUsdBalanceField').value = results
       
         results= "\nGetting operational account balances...\n"
         const operational_balances = await client.request({
@@ -185,6 +186,9 @@
         })
         results += JSON.stringify(operational_balances.result, null, 2)
         document.getElementById('operationalResultField').value = results
+
+
+        
       
         document.getElementById('operationalBalanceField').value = 
           (await client.getXrpBalance(operational_wallet.address))
