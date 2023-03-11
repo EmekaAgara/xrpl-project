@@ -138,17 +138,33 @@
                       </td>
                       <td>
                         <p class="input_header">Flags </p>
-                        <input type="text" class="text_input" id="operationalFlagsField" value="1"  size="40"></input>
+                        <input type="text" class="text_input" id="operationalFlagsField" value="8"  size="40"></input>
 
                         <p class="input_header">NFToken ID </p>
                         <input type="text" class="text_input" id="operationalTokenIdField" value=""  size="40"></input>
 
-                        <p class="input_header">Transfer Fee </p>
+                        <p class="input_header">NFToken Offer Index</p>
+                        <input type="text" class="text_input" id="operationalTransferFeeField" value=""  size="40"></input>
+
+                        <p class="input_header">Owner</p>
+                        <input type="text" class="text_input" id="operationalTransferFeeField" value=""  size="40"></input>
+
+                        <p class="input_header">Destination</p>
+                        <input type="text" class="text_input" id="operationalTransferFeeField" value=""  size="40"></input>
+
+                        <p class="input_header">Expiration</p>
+                        <input type="text" class="text_input" id="operationalTransferFeeField" value=""  size="40"></input>
+
+                        <p class="input_header">Transfer Fee</p>
                         <input type="text" class="text_input" id="operationalTransferFeeField" value=""  size="40"></input>
                         <br><br>
-                        <button type="button" class="black_button" onClick="oPmintToken()">Mint Tokens</button>
+                        <button type="button" class="black_button" onClick="oPcreateSellOffer()">Create Sell Offer</button>
+                        <button type="button" class="black_button" onClick="oPacceptSellOffer()">Accept Sell Offer</button>
+                        <button type="button" class="black_button" onClick="oPcreateBuyOffer()">Create Buy Offer</button>
+                        <button type="button" class="black_button" onClick="oPacceptBuyOffer()">Accept Buy Offer</button>
                         <button type="button" class="black_button" onClick="oPgetTokens()">Get Tokens</button>
-                        <button type="button" class="black_button" onClick="oPburnToken()">Burn Tokens</button>
+                        <button type="button" class="black_button" onClick="oPgetOffers()">Get Offers</button>
+                        <button type="button" class="black_button" onClick="oPcancelOffers()">Cancel Offers</button>
                       </td>
                     </tr>
                     
