@@ -171,8 +171,11 @@
           ledger_index: "validated",
           hotwallet: [operational_wallet.address]
         })
-        results += JSON.stringify(standby_balances.result, null, 2)
+        results += JSON.stringify(standby_balances.result.balances, null, 2)
         document.getElementById('standbyResultField').value = results
+
+
+        document.getElementById('standbyUsdBalanceField').value = results
       
         results= "\nGetting operational account balances...\n"
         const operational_balances = await client.request({
