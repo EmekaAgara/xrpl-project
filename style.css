@@ -15,6 +15,19 @@
     background-image: url('./assets/balancecard1.png');
 }
 
+.bcard2{
+    /* width: 88%; */
+    max-width: 88%;
+    /* padding: 4px; */
+    background-color: #8d8d9c;
+    border-radius: 7px;
+    /* padding-bottom: 120px; */
+    padding: 30px;
+    margin-bottom: 10px;
+    /* background-image: url('./assets/balancecard.png'); */
+    background-image: url('./assets/Card.png');
+}
+
 .account_d_card{
     /* width: 88%; */
     max-width: 88%;
@@ -63,9 +76,9 @@
 
     background: none;
     border: none;
-    font-size: 14px;
-    font-weight: 600;
-    color: rgb(71, 66, 66);
+    font-size: 16px;
+    font-weight: 500;
+    color: rgb(206, 200, 200);
     margin: 0px;
     padding: 0;
     padding-bottom: 5px;
